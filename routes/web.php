@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+//Route pour afficher la vue tache destiné à vueJS
+Route::get('/', function(){
+    return view('tache');
+});
 
 
 
