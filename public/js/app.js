@@ -1821,7 +1821,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/taches').then(function (response) {
-        console.log(response.data);
         _this.taches = response.data;
       }).catch(function (error) {
         if (error.response) {
@@ -1842,7 +1841,6 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/taches', {
         titre: this.titreTache
       }).then(function (response) {
-        console.log(response.data);
         _this2.titreTache = '';
 
         _this2.getTache();
@@ -1870,7 +1868,6 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/taches/".concat(this.id), {
         titre: this.titreTache
       }).then(function (response) {
-        console.log(response.data);
         _this3.titreTache = '';
         _this3.isEdit = false;
 
@@ -1895,8 +1892,6 @@ __webpack_require__.r(__webpack_exports__);
         _this4.titreTache = '';
 
         _this4.getTache();
-
-        console.log(response.data);
       }).catch(function (error) {
         if (error.response) {
           console.log(error.response.data);

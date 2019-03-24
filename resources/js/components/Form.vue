@@ -55,7 +55,6 @@ export default {
         getTache(){
             axios.get('/api/taches')
             .then((response)=>{
-                console.log(response.data);
                 this.taches = response.data;
             }).catch((error)=>{
                 if(error.response){
@@ -73,7 +72,6 @@ export default {
         addTache(){
             axios.post('/api/taches', {titre: this.titreTache})
             .then((response)=>{
-                console.log(response.data);
                 this.titreTache = '';
                 this.getTache();
             }).catch((error)=>{
@@ -98,7 +96,6 @@ export default {
         updateTache(){
             axios.put(`/api/taches/${this.id}`, {titre: this.titreTache})
             .then((response)=>{
-                console.log(response.data);
                 this.titreTache = '';
                 this.isEdit = false;
                 this.getTache();
@@ -120,7 +117,6 @@ export default {
             .then((response)=>{
              this.titreTache = '';
              this.getTache();
-             console.log(response.data);   
             }).catch((error)=>{
                 if(error.response){
                     console.log(error.response.data);
