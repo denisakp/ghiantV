@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::post('taches', 'TacheController@store'); //Route pour ajouter une tâche
+
+Route::get('taches', 'TacheController@index'); // Route pour la liste des tâches
+
+Route::get('taches/{id}', 'TacheController@show'); //Route pour afficher une tâche
+
+Route::put('taches/{id}', 'TacheController@update'); //Route pour modifier une tâche
+
+Route::delete('taches/{id}', 'TacheController@delete'); //Route pour supprimer une tâche
